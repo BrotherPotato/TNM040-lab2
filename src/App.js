@@ -22,7 +22,7 @@ const consoleReturn = (e) => {
 
   return (
     <div>
-      <h1>Lab-1-A-DOODLE-DOO</h1>
+      <h1>Lab-2-A-DOODLE-DOO</h1>
       <h2>Part 1</h2>
       <input type="text" id="search" placeholder="Search for a country" onInput={consoleReturn} />
 
