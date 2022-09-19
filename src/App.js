@@ -16,11 +16,15 @@ function App() {
     return country.name.common !== "Antarctica";
   });
  
+const consoleReturn = (e) => {
+  console.log("You clicked on " + e.target.value);
+}
+
   return (
     <div>
       <h1>Lab-1-A-DOODLE-DOO</h1>
       <h2>Part 1</h2>
-      <CountryInfo data={countries[0]}/>
+      <input type="text" id="search" placeholder="Search for a country" onInput={consoleReturn} />
 
       <h2>Part 2</h2>
 
