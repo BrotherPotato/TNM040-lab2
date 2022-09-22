@@ -1,16 +1,16 @@
-import './App.css';
+import './App.css'
 import countries from 'world-countries'
-import CountryInfo from './components/CountryInfo.js';
+import CountryInfo from './components/CountryInfo.js'
 
-const n = 5;
-const m = 15;
+const n = 5
+const m = 15
 
 function App() {
   console.log(countries)
 
   countries.sort((a, b) => {
-    return b.area - a.area;
-  });
+    return b.area - a.area
+  })
 
   countries = countries.filter((country) => {
     return country.name.common !== "Antarctica";
