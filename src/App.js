@@ -31,13 +31,13 @@ function App () {
       <div className='part2Div'>
         <div className='col1'>
           {filteredCountries.slice(0, n).map((c) => (
-            <CountryInfo data={c} details large_area={countries[0].area} key={c.ccn3} />
+            <CountryInfo data={c} details largeArea={countries[0].area} key={c.ccn3} />
           ))}
         </div>
 
         <div className='col2'>
           {filteredCountries.slice(n, m).map((c) => (
-            <CountryInfo data={c} details={false} large_area={countries[0].area} key={c.ccn3}/>
+            <CountryInfo data={c} details={false} largeArea={countries[0].area} key={c.ccn3} />
           ))}
         </div>
       </div>
