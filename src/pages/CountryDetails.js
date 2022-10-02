@@ -5,7 +5,7 @@ function CountryDetails (props) {
     <div>
       <h1>{props.match.params.id}</h1>
     </div>
-  );
+  )
 }
 
 export default CountryDetails

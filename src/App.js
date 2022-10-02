@@ -1,16 +1,19 @@
 import React from 'react'
 import CountryList from './components/CountryList'
 import {
-  createBrowserRouter,
-  RouterProvider,
+  //  createBrowserRouter,
+  //  RouterProvider,
   Route,
-  Link,
-} from 'react-router-dom';
+  Link
+} from 'react-router-dom'
 
 function App () {
   return (
     <div>
-      <Route>s</Route>
+      <Route path='/' element={<CountryList />}>
+        <Link to='/'>Home</Link>
+        <Link to='/country/:id'>Country Details</Link>
+      </Route>
     </div>
   )
 }

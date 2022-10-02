@@ -1,23 +1,36 @@
 import './App.css'
 import countries from 'world-countries'
-import CountryInfo from './components/CountryInfo.js'
+import CountryInfo from '../components/CountryInfo.js'
+import { useState } from 'react'
 
 const n = 5
 const m = 15
 
 function CountryList () {
+  const [searchString, setSearchString] = useState('')
   console.log(countries)
 
   countries.sort((a, b) => {
     return b.area - a.area
   })
-
-  const filteredCountries = countries.filter((country) => {
+  // filtrerar bort då return = 1
+  let filteredCountries = countries.filter((country) => {
     return country.name.common !== 'Antarctica'
   })
 
   const consoleReturn = (e) => {
-    console.log('You clicked on ' + e.target.value)
+    setSearchString(e.target.value)
+    console.log('You clicked on ' + searchString)
+
+    filteredCountries = filteredCountries.filter(matchSearch)
+  }
+
+  const matchSearch = countries => {
+    const lowerCaseWord = countries.common.name.toLowerCase()
+    const lowerCaseSearchString = searchString.toLowerCase()
+
+    // What is the '0' representing? What happens if you change it to '1'?
+    return lowerCaseWord.indexOf(lowerCaseSearchString) === 0
   }
 
   return (
