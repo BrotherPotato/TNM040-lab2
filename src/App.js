@@ -1,20 +1,19 @@
 import React from 'react'
-import CountryList from './components/CountryList'
-import {
-  //  createBrowserRouter,
-  //  RouterProvider,
-  Route,
-  Link
-} from 'react-router-dom'
+import countries from 'world-countries'
+import CountryList from './components/CountryInfo.js'
+import CountryInfo from './components/CountryInfo.js'
+// <Route path=':id' element={<CountryList />} />
+import CountryDetails from './pages/CountryDetails.js'
+
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
 function App () {
   return (
-    <div>
-      <Route path='/' element={<CountryList />}>
-        <Link to='/'>Home</Link>
-        <Link to='/country/:id'>Country Details</Link>
-      </Route>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<CountryList />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

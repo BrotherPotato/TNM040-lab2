@@ -1,6 +1,6 @@
 import './App.css'
 import countries from 'world-countries'
-import CountryInfo from '../components/CountryInfo.js'
+import CountryInfo from './components/CountryInfo.js'
 import { useState } from 'react'
 
 const n = 5
@@ -14,7 +14,7 @@ function CountryList () {
     return b.area - a.area
   })
   // filtrerar bort då return = 1
-  let filteredCountries = countries.filter((country) => {
+  const filteredCountries = countries.filter((country) => {
     return country.name.common !== 'Antarctica'
   })
 
@@ -22,9 +22,9 @@ function CountryList () {
     setSearchString(e.target.value)
     console.log('You clicked on ' + searchString)
 
-    filteredCountries = filteredCountries.filter(matchSearch)
+    //  filteredCountries = filteredCountries.filter(matchSearch)
   }
-
+  /**
   const matchSearch = countries => {
     const lowerCaseCountryName = countries.common.name.toLowerCase()
     const lowerCaseSearchString = searchString.toLowerCase()
@@ -32,6 +32,7 @@ function CountryList () {
 
     return lowerCaseCountryName.slice(0, lowerCaseSearchString.length) === lowerCaseSearchString
   }
+  */
 
   return (
     <div>

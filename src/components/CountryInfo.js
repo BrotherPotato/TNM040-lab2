@@ -3,6 +3,7 @@ import React from 'react'
 const CountryInfo = ({ data, details, largeArea }) => {
   return (
     <div className='country_box'>
+      <p>AAA</p>
       <div className='top'>
         <p className='country_name'>{data.name.common}</p>
         <p className='area'>

@@ -1,9 +1,9 @@
 import React from 'react'
 
-function CountryDetails (props) {
+function CountryDetails () {
   return (
     <div>
-      <h1>{props.match.params.id}</h1>
+      <h1>1</h1>
     </div>
   )
 }
