@@ -26,11 +26,11 @@ function CountryList () {
   }
 
   const matchSearch = countries => {
-    const lowerCaseWord = countries.common.name.toLowerCase()
+    const lowerCaseCountryName = countries.common.name.toLowerCase()
     const lowerCaseSearchString = searchString.toLowerCase()
+    lowerCaseCountryName.slice(0, lowerCaseSearchString.length)
 
-    // What is the '0' representing? What happens if you change it to '1'?
-    return lowerCaseWord.indexOf(lowerCaseSearchString) === 0
+    return lowerCaseCountryName.slice(0, lowerCaseSearchString.length) === lowerCaseSearchString
   }
 
   return (
