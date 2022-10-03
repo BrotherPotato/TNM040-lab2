@@ -2,15 +2,16 @@ import { Outlet, Link } from 'react-router-dom'
 
 const Layout = () => {
   return (
-    <>
+    <div>
       <nav style={{ margin: 'auto' }}>
         <ul>
-          <Link to='/'>Home</Link>
+          <Link to='/'><h1>Go home</h1></Link>
         </ul>
       </nav>
 
       <Outlet />
-    </>
+
+    </div>
   )
 }
 

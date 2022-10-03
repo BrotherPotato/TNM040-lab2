@@ -11,8 +11,8 @@ function App () {
   return (
     <BrowserRouter>
       <Routes>
+        <Route index element={<CountryList />} />
         <Route path='/' element={<Layout />}>
-          <Route index element={<CountryList />} />
           <Route path='/country/:cca3' element={<CountryDetails />} />
         </Route>
       </Routes>
