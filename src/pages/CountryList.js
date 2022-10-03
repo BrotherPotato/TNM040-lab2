@@ -11,7 +11,7 @@ function CountryList () {
   countries.sort((a, b) => {
     return b.area - a.area
   })
-  // filtrerar bort då return = 1
+
   const filteredCountries1 = countries.filter((country) => {
     return country.name.common !== 'Antarctica'
   })

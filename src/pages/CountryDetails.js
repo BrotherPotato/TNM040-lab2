@@ -14,18 +14,17 @@ function CountryDetails () {
   const borders = c.borders.map((c) => getCountryByCca3(c))
   borders.sort((a, b) => b.area - a.area)
 
-  countries.sort((a, b) => {
-    return b.area - a.area
-  })
+  const relevantCountries = [...borders, c]
+  relevantCountries.sort((a, b) => b.area - a.area)
 
   return (
     <div className='detailDiv'>
-      <CountryInfo data={c} details largeArea={countries[0].area} key={c.ccn3} />
+      <CountryInfo data={c} details largeArea={relevantCountries[0].area} key={c.ccn3} />
 
       <h2 style={{ margin: '0.5em' }}>Border Countries: {borders.length}</h2>
 
       {borders.map((b) => (
-        <CountryInfo data={b} details={false} largeArea={countries[0].area} key={b.ccn3} />
+        <CountryInfo data={b} details={false} largeArea={relevantCountries[0].area} key={b.ccn3} />
       ))}
 
     </div>
