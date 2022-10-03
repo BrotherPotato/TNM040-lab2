@@ -2,7 +2,7 @@ import { Outlet, Link } from 'react-router-dom'
 
 const Layout = () => {
   return (
-    <div>
+    <div className='detailDiv'>
       <nav style={{ margin: 'auto' }}>
         <ul>
           <Link to='/'><h1>Go home</h1></Link>
@@ -10,7 +10,6 @@ const Layout = () => {
       </nav>
 
       <Outlet />
-
     </div>
   )
 }

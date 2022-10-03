@@ -20,7 +20,7 @@ function CountryDetails () {
   })
 
   return (
-    <div>
+    <div className='detailDiv'>
       <CountryInfo data={c} details largeArea={countries[0].area} key={c.ccn3} />
 
       <h2 style={{ margin: '0.5em' }}>BORDER COUNTRIES: {borders.length}</h2>
