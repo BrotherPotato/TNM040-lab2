@@ -1,9 +1,8 @@
 import React from 'react'
 import CountryList from './pages/CountryList.js'
 import CountryDetails from './pages/CountryDetails.js'
-import './App.css'
-
 import Layout from './pages/Layout'
+import './App.css'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 

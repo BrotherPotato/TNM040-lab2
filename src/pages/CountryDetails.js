@@ -1,4 +1,3 @@
-import React from 'react'
 import { useParams } from 'react-router-dom'
 import countries from 'world-countries'
 import CountryInfo from '../components/CountryInfo.js'
