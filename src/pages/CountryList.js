@@ -20,14 +20,12 @@ function CountryList () {
     setSearchString(e.target.value)
   }
 
-  const matchSearch = countries => {
+  const filteredCountries2 = filteredCountries1.filter(countries => {
     const lowerCaseCountryName = countries.name.common.toLowerCase()
     const lowerCaseSearchString = searchString.toLowerCase()
 
     return lowerCaseCountryName.slice(0, lowerCaseSearchString.length) === lowerCaseSearchString
-  }
-
-  const filteredCountries2 = filteredCountries1.filter(matchSearch)
+  })
 
   return (
     <div>

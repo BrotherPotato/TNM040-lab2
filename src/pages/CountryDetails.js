@@ -22,10 +22,10 @@ function CountryDetails () {
     <div className='detailDiv'>
       <CountryInfo data={c} details largeArea={countries[0].area} key={c.ccn3} />
 
-      <h2 style={{ margin: '0.5em' }}>BORDER COUNTRIES: {borders.length}</h2>
+      <h2 style={{ margin: '0.5em' }}>Border Countries: {borders.length}</h2>
 
       {borders.map((b) => (
-        <CountryInfo key={b.ccn3} data={b} detailed={false} />
+        <CountryInfo data={b} details={false} largeArea={countries[0].area} key={b.ccn3} />
       ))}
 
     </div>
