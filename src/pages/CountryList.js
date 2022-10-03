@@ -1,6 +1,5 @@
-import './App.css'
 import countries from 'world-countries'
-import CountryInfo from './components/CountryInfo.js'
+import CountryInfo from '../components/CountryInfo.js'
 import { useState } from 'react'
 
 const n = 5
@@ -34,6 +33,7 @@ function CountryList () {
   }
 
   */
+  console.log(filteredCountries)
 
   return (
     <div>

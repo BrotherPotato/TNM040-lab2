@@ -1,6 +1,7 @@
 import React from 'react'
 
 const CountryInfo = ({ data, details, largeArea }) => {
+  console.log(data)
   return (
     <div className='country_box'>
       <p>AAA</p>
