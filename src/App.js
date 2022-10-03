@@ -1,17 +1,21 @@
 import React from 'react'
 import countries from 'world-countries'
 import CountryList from './components/CountryInfo.js'
-import CountryInfo from './components/CountryInfo.js'
-// <Route path=':id' element={<CountryList />} />
 import CountryDetails from './pages/CountryDetails.js'
+import './App.css'
 
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import Layout from './pages/Layout'
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App () {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<CountryList />} />
+        <Route path='/' element={<Layout />}>
+          <Route index element={<CountryList />} />
+          <Route path='Country/:cca3' element={<CountryDetails />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )

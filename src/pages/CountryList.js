@@ -32,6 +32,7 @@ function CountryList () {
 
     return lowerCaseCountryName.slice(0, lowerCaseSearchString.length) === lowerCaseSearchString
   }
+
   */
 
   return (
@@ -41,7 +42,6 @@ function CountryList () {
       <input type='text' id='search' placeholder='Search for a country' onInput={consoleReturn} />
 
       <h2>Part 2</h2>
-
       <div className='part2Div'>
         <div className='col1'>
           {filteredCountries.slice(0, n).map((c) => (
